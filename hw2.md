@@ -35,3 +35,12 @@ gantt
     使用者訓練          :        task10, after task8, 20d
     使用者測試          :        task11, after task9, 25d
     使用者測試          :        task11, after task10, 25d
+``````
+```mermaid
+graph TD
+    A[研擬計畫 1天] --> B[任務分配 4天]
+    B --> D[程式開發 70天]
+    D --> F[程式測試 30天]
+    F --> I[系統測試 25天]
+    I --> K[使用者測試 25天]
+``````
