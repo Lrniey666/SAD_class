@@ -1,23 +1,133 @@
-gantt
-    title 專案甘特圖
-    dateFormat  YYYY-MM-DD
-    section 研擬計畫
-    研擬計畫           :done,    task1, 2024-09-30, 1d
-    section 任務分配
-    任務分配           :done,    task2, after task1, 4d
-    section 硬體相關
-    取得硬體           :done,    task3, after task1, 17d
-    安裝硬體           :active,  task5, after task3, 10d
-    section 軟體開發
-    程式開發           :active,  task4, after task2, 70d
-    section 測試相關
-    程式測試           :active,  task6, after task4, 30d
-    系統測試           :active,  task9, after task6, 25d
-    section 文件相關
-    撰寫使用手冊       :active,  task7, after task5, 25d
-    section 檔案相關
-    轉換檔案           :active,  task8, after task5, 20d
-    section 使用者相關
-    使用者訓練         :active,  task10, after task7, 20d
-    使用者測試         :active,  task11, after task9, 25d
 
+# 如何撰寫數學式及圖表
+
+**[:arrow_right: 看此筆記的原始碼 :arrow_left:](/MathJax-and-UML-tw?both)**
+
+您可以在 HackMD 上撰寫出很多種圖表與數學表達式，請參考以下的範例：
+
+## MathJax
+
+您可以使用 **MathJax** 語法 來產生 *LaTeX* 數學表達式，如同 [math.stackexchange.com](http://math.stackexchange.com/)，但是開始的 `$` 後面以及結尾的 `$` 前面不能有空白：
+
+The *Gamma function* satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
+
+使用區塊層級的數學式時，請在您的數學式之前與之後給予 `$$` 以及換行：
+
+$$
+x = {-b \pm \sqrt{b^2-4ac} \over 2a}.
+$$
+
+$$
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+$$
+
+[更多關於 **LaTeX** 數學表達式 <i class="fa fa-external-link"></i>](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
+
+UML 圖表
+---
+### 循序圖
+
+```sequence
+艾莉絲->包柏: 哈摟，你好嗎？
+Note right of 包柏: 包柏思考中
+包柏-->艾莉絲: 我很好，謝謝！
+Note left of 艾莉絲: 艾莉絲回應
+艾莉絲->包柏: 最近過得怎樣？
+```
+[更多關於 **循序圖** 語法 <i class="fa fa-external-link"></i>](http://bramp.github.io/js-sequence-diagrams/)
+&nbsp;
+&nbsp;
+
+---
+
+### 流程圖
+
+您可以像是以下使用流程圖：
+```flow
+st=>start: 開始
+e=>end: 結束
+op=>operation: 我的操作
+op2=>operation: 啦啦啦
+cond=>condition: 是或否？
+
+st->op->op2->cond
+cond(yes)->e
+cond(no)->op2
+```
+
+
+[更多關於 **流程圖** 語法 <i class="fa fa-external-link"></i>](http://adrai.github.io/flowchart.js/)
+
+&nbsp;
+&nbsp;
+
+---
+
+### Graphviz
+```graphviz
+digraph hierarchy {
+
+                nodesep=1.0 // increases the separation between nodes
+                
+                node [color=Red,fontname=Courier,shape=box] //All nodes will this shape and colour
+                edge [color=Blue, style=dashed] //All the lines look like this
+
+                Headteacher->{Deputy1 Deputy2 BusinessManager}
+                Deputy1->{Teacher1 Teacher2}
+                BusinessManager->ITManager
+                {rank=same;ITManager Teacher1 Teacher2}  // Put them on the same level
+}
+```
+[更多關於 **graphviz** 語法 <i class="fa fa-external-link"></i>](http://www.tonyballantyne.com/graphs.html)
+&nbsp;
+&nbsp;
+
+---
+
+
+### Mermaid
+```mermaid
+gantt
+    title A Gantt Diagram
+
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    anther task      : 24d
+```
+[更多關於 **mermaid** 語法 <i class="fa fa-external-link"></i>](http://mermaid-js.github.io/mermaid)
+&nbsp;
+&nbsp;
+
+---
+
+
+### Abc
+```abc
+X:1
+T:Speed the Plough
+M:4/4
+C:Trad.
+K:G
+|:GABc dedB|dedB dedB|c2ec B2dB|c2A2 A2BA|
+GABc dedB|dedB dedB|c2ec B2dB|A2F2 G4:|
+|:g2gf gdBd|g2f2 e2d2|c2ec B2dB|c2A2 A2df|
+g2gf g2Bd|g2f2 e2d2|c2ec B2dB|A2F2 G4:|
+```
+[更多關於 **abc** 語法 <i class="fa fa-external-link"></i>](http://abcnotation.com/learn)
+&nbsp;
+&nbsp;
+
+---
+### 相關功能
+- [基本排版](https://hackmd.io/s/B1CII--57)
+- [在筆記中貼入程式碼](https://hackmd.io/s/Hk8sclbq7) 
+### 常見功能
+- [如何刪除筆記](https://hackmd.io/s/rJrvQDm97) 
+- [儲存我的筆記](https://hackmd.io/s/HkDYdjLcX) 
+- [幫筆記加上標籤](https://hackmd.io/s/S1wjouv5X) 
+
+&nbsp;
+###### tags: `tutorial`
