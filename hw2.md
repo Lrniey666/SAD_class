@@ -13,10 +13,8 @@ graph TD
     I --> K[使用者測試 25天]
     J --> K
 
+``````
 
-
-
-```mermaid
 gantt
     title 專案甘特圖
     dateFormat  YYYY-MM-DD
