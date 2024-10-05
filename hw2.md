@@ -1,3 +1,5 @@
+# PERT/CPM 圖
+
 ```mermaid
 graph TD
     A[研擬計畫 1天] --> B[任務分配 4天]
@@ -14,6 +16,7 @@ graph TD
     J --> K
 
 ``````
+# 甘特圖
 ```mermaid
 gantt
     title 專案甘特圖
@@ -36,6 +39,7 @@ gantt
     使用者測試          :        task11, after task9, 25d
     使用者測試          :        task11, after task10, 25d
 ``````
+# 關鍵路徑
 ```mermaid
 graph TD
     A[研擬計畫 1天] --> B[任務分配 4天]
