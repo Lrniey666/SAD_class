@@ -1,7 +1,7 @@
 # 工作分解結構清單
 
 ```mermaid
-  table
+table
     title 專案任務分解結構
     header 任務, 說明, 需時（天）, 前置任務
     row 1, 研擬計畫, 1, -
