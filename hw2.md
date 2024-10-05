@@ -13,24 +13,4 @@ graph TD
     I --> K[使用者測試 25天]
     J --> K
 ****
-<br>
-gantt
-    title 專案甘特圖
-    dateFormat  YYYY-MM-DD
-    section 研擬及取得資源
-    研擬計畫            :done,  task1, 2024-10-01, 1d
-    任務分配            :active, task2, after task1, 4d
-    取得硬體            :active, task3, after task1, 17d
-    section 程式開發及測試
-    程式開發            :        task4, after task2, 70d
-    程式測試            :        task6, after task4, 30d
-    section 安裝及系統整合
-    安裝硬體            :        task5, after task3, 10d
-    撰寫使用手冊        :        task7, after task5, 25d
-    轉換檔案            :        task8, after task5, 20d
-    section 系統測試及驗收
-    系統測試            :        task9, after task6, 25d
-    使用者訓練          :        task10, after task7, 20d
-    使用者訓練          :        task10, after task8, 20d
-    使用者測試          :        task11, after task9, 25d
-    使用者測試          :        task11, after task10, 25d
+
