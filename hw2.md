@@ -14,7 +14,7 @@ graph TD
     J --> K
 
 ``````
-
+```mermaid
 gantt
     title 專案甘特圖
     dateFormat  YYYY-MM-DD
